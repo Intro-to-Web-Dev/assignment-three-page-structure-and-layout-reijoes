@@ -1,0 +1,374 @@
+/* 
+----------Requirement 2------------
+
+Question 1:
+My layout originally had very muted colors with mostly grayscale. I decided to add a bit more color
+by using some more blue colors rather than gray. Another reason I stuck to a muted color scheme is 
+because computer parts are generally colorful, and I want the products to pop more on the page.
+
+Question 2: (Color Palette)
+I found this light blue color palette on this website, https://colorhunt.co/palette/201686.
+The hex colors used are:
+#f1f3f8
+#d6e0f0
+#8d93ab
+#393b44
+
+Question 3:
+I decided to save the darkest color of the palette (#393b44) for the footer, this is because I want to draw the least amount of attention to it, and give the website a solid looking base.
+I used the lightest color (#f1f3f8) as an alternative to white for the background of the whole website.
+The other colors I saved for buttons and the navigation elements to show that they are interactable.
+*/
+
+/*
+--------------Requirement 3-------------
+
+Question 1: I will be using Arial for my main font for <body> and <p> elements. This is to keep a basic look to the website,
+however, I will be using a font called "Aldo the Apache" for my headings. This includes <h1> through <h3>
+
+Question 2: All headings are bold, and <p> elements change text size depending on which layout. I used 22pt font for <h1> as this is the main text near the top of the screen describing what page you are on.
+17pt font was used for a slightly smaller text size in <h2> elements. These are important headings in the Resources page and Checkout page.
+15pt font was used for the options located in the footer. These headings use the <h3> tag.
+
+Question 3: My desired line height will simply be 1, while the letter AND word spacing attributes will be set to normal.
+
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	letter-spacing: normal;
+	word-spacing: normal;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+@font-face {
+    font-family: 'ComputerFont';
+    src: url(/font/AldotheApache.ttf); 
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.gridbox{
+    display: grid;
+    grid-template: 50px 70px 1fr 100px/ 1fr 160px 70% 1fr; 
+	background-color: #f1f3f8;
+}
+header{
+    grid-area: 1/2/2/4;
+}
+#headerbg{
+	background: #8d93ab;
+	grid-area: 1/1/2/5;
+}
+#logo{
+	margin-top: 2.5px;
+	margin-left: 5px;
+	width: 45px;
+}
+#cart{
+	float: inline-end;	
+	margin-top: 10px;
+	margin-right: 20px;
+	width: 38px;
+}
+#glass{
+	float: inline-end;
+	margin-right: 5%;
+	margin-top: 10px;
+	width: 30px;
+}
+#searchbox{
+	float: inline-end;
+	width: 27%;
+	height: 20px;
+	margin-right: 10px;
+	margin-top: 12px;
+	box-shadow: 2px 2px gray;
+	background-color: #d6e0f0;
+}
+#searchtext{
+	color: darkgray;
+	font-size: 14pt;
+}
+#namefield{
+	display: flex;
+	grid-area: 2/1/3/5;
+	border-bottom: 2px solid gray;
+	justify-content: center;
+}
+/*
+h1 headings will be the text near the top of the screen describing the current page the user is on 
+*/
+h1{
+	align-self: flex-end;	
+	font-size: 22pt;
+	margin-left: 180px;
+	color: gray;
+	font-weight: bold;	
+	font-family: 'ComputerFont';
+}
+#flexcontainer{
+	display: flex;
+	grid-area: 3/3/4/4;
+	flex-wrap: wrap;
+	padding-bottom: 75px;
+	justify-content: center;
+}
+.box{
+	display: flex;
+	height: 300px;
+	width: 250px;
+	margin-left: 45px;
+	margin-right: 45px;
+	margin-bottom: 40px;
+	text-align: center;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+.pcpart{
+	height: auto;
+	width: 200px;
+}
+.label{
+	font-size: 18pt;
+	color: gray;
+}
+nav{
+	display: grid;
+	grid-area: 3/2/4/3;
+	margin-top: 30px;
+	height: 250px;
+	background-color: #d6e0f0;
+}
+nav p{
+	padding-top: 15px;
+	padding-left: 5px;
+	font-size: 14pt;
+	border: 1px solid gray;
+}
+footer{
+    background: #393b44;
+    grid-area: 4/1/5/5;
+}
+footer p{
+	font-size: 22pt;
+	text-align: center;
+	color: lightgrey;
+	font-weight: bold;
+}
+#footerflex{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+/*
+h2 headings are used for the resources page as the header for each section of text
+*/
+h2{
+	margin-top: 15px;
+	width: 300px;
+	height: 30px;
+	text-align: center;
+	font-size: 17pt;
+	color: lightgrey;
+	font-weight: bold;
+	font-family: 'ComputerFont';
+}
+#gridcontainer{
+	grid-area: 3/3/4/4;
+	display: grid;
+	grid-template: 60px 1fr 1fr 1fr 80px 60px/ 1fr;
+	margin-left: 40px;
+}
+#grid1{
+	grid-area: 1/1/2/2;
+	border-bottom: 2px solid darkgray;
+}
+#grid2{
+	grid-area: 2/1/3/2;
+	border-bottom: 2px solid darkgray;
+}
+#grid3{
+	grid-area: 3/1/4/2;
+	border-bottom: 2px solid darkgray;
+}
+#grid4{
+	grid-area: 4/1/5/2;
+	border-bottom: 2px solid darkgray;
+}
+#grid5{
+	grid-area: 5/1/6/2;
+	border-bottom: 2px solid darkgray;
+}
+#grid6{
+	grid-area: 6/1/7/2;
+}
+#shoppingbutton{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 35px;
+	width: 160px;
+	float: right;
+	border: 1px solid black;
+	margin-top: 7px;
+	background-color: #d6e0f0;
+}
+#currentcart{
+	font-size: 16pt;
+	color: gray;
+	margin-top: 30px;
+	font-weight: bold;
+}
+#shoppingtext{
+	font-size: 17px;
+	font-weight: bold;
+	color: dimgray;
+}
+.checkoutimg{
+	float: inline-start;
+	height: auto;
+	width: 160px;
+	margin-top: 35px;
+}
+.checkoutpart{
+	float: inline-start;
+	margin-top: 120px;
+	font-size: 15pt;
+	color: gray;
+	font-weight: bold;
+	margin-left: 50px;
+}
+.price{
+	float: inline-end;
+	margin-top: 140px;
+	font-size: 16pt;
+	color: gray;
+	font-weight: bolder;
+}
+#total{
+	float: inline-end;
+	margin-top: 50px;
+	font-size: 17pt;
+	color: gray;
+	font-weight: bolder;
+}
+#totaltext{
+	float: left;
+	color: dimgray;
+	font-weight: bolder;
+	font-size: 23pt;
+	margin-top: 50px;
+}
+#paymentbutton{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 240px;
+	float: right;
+	border: 1px solid black;
+	margin-top: 7px;
+	background-color: #d6e0f0;
+}
+#paymenttext{
+	font-size: 17px;
+	font-weight: bold;
+	color: dimgray;
+}
+#resourcecontainer{
+	display: flex;
+	flex-direction: column;
+	grid-area: 3/3/4/4;
+	margin-left: 100px;
+	justify-content: space-evenly;
+	height: 750px;
+}
+/*
+h3 headings are used for the different buttons within the footer
+*/
+h3{
+	font-size: 15pt;
+	color: dimgray;
+	text-decoration: underline;
+	font-family: 'ComputerFont';
+}
+.info{
+	color: dimgray;
+	font-size: 18px;
+}
+#divbox{
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 2px solid gray;
+    box-shadow: 15px 10px 10px lightgrey;
+    padding-left: 50px;
+    padding-right: 50px;   
+    padding-bottom: 30px;
+	text-align: center;
+	background-color: #d6e0f0;
+}
+/*
+used for title in layout.html
+*/
+#assignment{
+	font-weight: bold;
+	font-size: 18pt;
+	font-family: 'ComputerFont';
+	margin-top: 50px;
+	margin-bottom: 40px;
+}
+#sign{
+	font-weight: bold;
+	font-size: 16pt;
+	margin-bottom: 40px;
+}
+.pageimg{
+	width: 60%;
+	height: auto;
+	border: 2px solid black;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#toptext{
+	font-size: 14pt;
+	font-weight: bold;
+	margin-bottom: 40px;
+}
